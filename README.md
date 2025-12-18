@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 शिकूसारे (ShikuSare) - Educational Social Network
 
-## Getting Started
+**शिकूसारे** हे एक अभिनव शैक्षणिक सोशल नेटवर्क आणि लर्निंग प्लॅटफॉर्म आहे. हे ॲप विद्यार्थी, शिक्षक, पालक आणि शैक्षणिक संस्था यांना एकाच धाग्यात जोडते. यामध्ये पहिली ते पदवीपर्यंतचे शिक्षण इंटरॅक्टिव्ह 2D/3D ॲनिमेशन, ऑडिओ-व्हिडिओ आणि गेम्सच्या माध्यमातून उपलब्ध करून दिले जाते.
 
-First, run the development server:
+![Project Status](https://img.shields.io/badge/Status-In%20Development-orange)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
+---
+
+## 🛠️ तंत्रज्ञान (Tech Stack)
+
+हा प्रोजेक्ट खालील आधुनिक तंत्रज्ञानावर आधारित आहे:
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [Shadcn UI](https://ui.shadcn.com/)
+- **Authentication:** [Better-Auth](https://better-auth.com/) (Secure & Type-safe)
+- **Database:** [MongoDB](https://www.mongodb.com/)
+- **ORM:** [Mongoose](https://mongoosejs.com/)
+- **State Management:** React Context / Hooks
+- **Icons:** Lucide React
+
+---
+
+## ✨ वैशिष्ट्ये (Features)
+
+- 🔐 **Secure Authentication:** Better-Auth वापरून सुरक्षित लॉगिन (Email/Password & Social Login).
+- 👥 **Role-Based Access:** विद्यार्थी, शिक्षक, पालक आणि संस्था यांच्यासाठी स्वतंत्र डॅशबोर्ड.
+- 🏫 **Educational Social Feed:** शैक्षणिक चर्चा, पोस्ट आणि ग्रुप्स.
+- 🎮 **Gamified Learning:** खेळाच्या माध्यमातून शिक्षण आणि क्विझ.
+- 📹 **Interactive Content:** 2D/3D ॲनिमेशन व्हिडिओ पाठ.
+- 📂 **Digital Locker:** शैक्षणिक कागदपत्रे सुरक्षित ठेवण्यासाठी जागा.
+
+---
+
+## 🚀 सुरुवात कशी करावी? (Getting Started)
+
+हा प्रोजेक्ट तुमच्या लोकल मशीनवर रन करण्यासाठी खालील स्टेप्स फॉलो करा:
+
+### 1. रिपॉजिटरी क्लोन करा (Clone Repository)
 ```bash
+git clone [https://github.com/your-username/shikusare.git](https://github.com/your-username/shikusare.git)
+cd shikusare
+
+2. पॅकेजेस इन्स्टॉल करा (Install Dependencies)
+npm install
+# किंवा
+yarn install
+# किंवा
+pnpm install
+
+3. एन्व्हायर्नमेंट व्हेरिएबल्स सेट करा (Environment Variables)
+प्रोजेक्टच्या रूट फोल्डरमध्ये .env नावाची फाईल तयार करा आणि खालील कीज (Keys) ऍड करा:
+# MongoDB Connection String (Mongoose साठी)
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/shikusare
+
+# Better-Auth Configuration
+BETTER_AUTH_SECRET=your_super_secure_random_string_here
+BETTER_AUTH_URL=http://localhost:3000
+
+# (Optional) Google Auth (जर वापरणार असाल तर)
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+4. प्रोजेक्ट रन करा (Run Development Server)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🤝 योगदान (Contributing)
+हा एक ओपन सोर्स प्रोजेक्ट आहे. तुम्हाला काही नवीन फिचर्स सुचवायचे असतील तर Pull Request पाठवू शकता किंवा Issue ओपन करू शकता.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📄 लायसन्स (License)
+MIT License अंतर्गत सुरक्षित.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
